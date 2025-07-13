@@ -78,6 +78,12 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	mob.log_talk(raw_msg, LOG_OOC)
 
 	var/keyname = key
+	var/donator_tier = GLOB.supporter_list[ckey] || 0
+
+	var/list/roman = list("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X")
+	var/tier_prefix = (donator_tier > 0 && donator_tier <= roman.len) ? "(Tier [roman[donator_tier]]) " : ""
+
+	keyname = "[tier_prefix][key]"
 
 	if(CONFIG_GET(flag/enable_cross_server_ooc)) //SKYRAT EDIT ADDITION
 		send_ooc_to_other_server(ckey, msg) //SKYRAT EDIT ADDITION

@@ -5,6 +5,7 @@ var/global/client_count = 0
 	TgsNew()
 	TgsInitializationComplete()
 
+
 /world/Reboot()
 	TgsReboot()
 	..()

@@ -4,4 +4,4 @@
 	if(!.["is_donator"])
 		return
 
-	.["donator_tier"] = GLOB.donator_list[user.client.ckey]
+	.["donator_tier"] = GLOB.supporter_list[user.client.ckey]

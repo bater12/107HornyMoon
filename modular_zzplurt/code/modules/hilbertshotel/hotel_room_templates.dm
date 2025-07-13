@@ -7,13 +7,13 @@
 
 /datum/map_template/ghost_cafe_rooms
 	var/category = GHC_MISC //Room categorizing
-	var/donator_tier = DONATOR_TIER_NONE //For donator rooms
+	var/donator_tier = SUPPORTER_TIER_NONE //For donator rooms
 	var/list/ckeywhitelist = list() //For ckey locked donator rooms
 
 /datum/map_template/ghost_cafe_rooms/New(path, rename, cache)
 	. = ..()
 	if(LAZYLEN(ckeywhitelist) && !donator_tier)
-		donator_tier = DONATOR_TIER_1
+		donator_tier = SUPPORTER_TIER_1
 
 /datum/map_template/ghost_cafe_rooms/apartment
 	category = GHC_APARTMENT

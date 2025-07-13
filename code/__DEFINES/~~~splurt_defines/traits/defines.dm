@@ -1,5 +1,4 @@
 // Quirk mood types
-#define QMOOD_NUDIST		"mood_nudist"
 #define QMOOD_MASKED_MOOK	"mood_masked_mook"
 #define QMOOD_HIDE_BAG		"mood_storage_concealment"
 #define QMOOD_WELL_TRAINED	"mood_dom_trained"
@@ -49,8 +48,6 @@
 #define QUIRK_EXAMINE_JIGGLY_ASS	"quirk_examine_jiggly_ass"
 /// Examine text status effect for Bane Syndrome
 #define QUIRK_EXAMINE_MASKED_MOOK	"quirk_examine_masked_mook"
-/// Examine text status effect for Nudist
-#define QUIRK_EXAMINE_NUDIST		"quirk_examine_nudist"
 /// Examine text status effect for Personal Space
 #define QUIRK_EXAMINE_PERSONALSPACE	"quirk_examine_personalspace"
 /// Examine text status effect for Hallowed

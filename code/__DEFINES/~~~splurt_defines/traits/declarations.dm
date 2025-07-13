@@ -24,8 +24,6 @@
 #define TRAIT_ARACHNID			"arachnid"
 /// Trait for quirk: Flutter
 #define TRAIT_FLUTTER			"flutter"
-/// Trait for quirk: Nudist
-#define TRAIT_NUDIST			"nudist"
 /// Trait for quirk: Clothes Eater
 #define TRAIT_CLOTH_EATER		"cloth_eater"
 /// Trait for quirk: Werewolf

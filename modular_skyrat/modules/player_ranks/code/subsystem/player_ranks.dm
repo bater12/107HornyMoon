@@ -50,7 +50,7 @@ SUBSYSTEM_DEF(player_ranks)
 	if(!istype(user))
 		CRASH("Invalid user type provided to is_donator(), expected 'client' and obtained '[user ? user.type : "null"]'.")
 
-	if(GLOB.donator_list[user.ckey])
+	if(GLOB.supporter_list[user.ckey])
 		return TRUE
 
 	if(admin_bypass && is_admin(user))
@@ -165,7 +165,7 @@ SUBSYSTEM_DEF(player_ranks)
 		return
 
 	var/datum/db_query/query_load_player_rank = SSdbcore.NewQuery(
-		"SELECT ckey FROM [format_table_name(PLAYER_RANK_TABLE_NAME)] WHERE deleted = 0 AND rank = :rank",
+		"SELECT ckey, tier FROM [format_table_name(PLAYER_RANK_TABLE_NAME)] WHERE deleted = 0 AND rank = :rank",
 		list("rank" = rank_controller.rank_title),
 	)
 
@@ -176,6 +176,16 @@ SUBSYSTEM_DEF(player_ranks)
 	rank_controller.load_from_query(query_load_player_rank)
 	qdel(query_load_player_rank) // SPLURT EDIT - Fix SQL qdel
 
+/datum/player_rank_controller/donator/load_from_query(datum/db_query/query)
+	. = ..()
+
+	while(query.NextRow())
+		var/ckey = ckey(query.item[1])
+		var/tier = text2num(query.item[2])
+		if(isnull(tier) || tier <= 0)
+			continue
+
+		GLOB.supporter_list[ckey] = tier
 
 /// Allows fetching the appropriate player_rank_controller based on its
 /// `rank_title`, for convenience.
@@ -206,7 +216,7 @@ SUBSYSTEM_DEF(player_ranks)
  * * ckey - The ckey of the player you want to now possess that player rank.
  * * rank_title - The title of the group you want to add the ckey to.
  */
-/datum/controller/subsystem/player_ranks/proc/add_player_to_group(admin, ckey, rank_title)
+/datum/controller/subsystem/player_ranks/proc/add_player_to_group(admin, ckey, rank_title, tier = 1)
 	if(IsAdminAdvancedProcCall())
 		return FALSE
 
@@ -255,7 +265,7 @@ SUBSYSTEM_DEF(player_ranks)
 		controller.add_player_legacy(ckey)
 		return TRUE
 
-	return add_player_rank_sql(controller, ckey, admin_holder.target)
+	return add_player_rank_sql(controller, ckey, admin_holder.target, tier)
 
 
 /**
@@ -267,16 +277,16 @@ SUBSYSTEM_DEF(player_ranks)
  * * ckey - The ckey of the player you want to now possess that player rank.
  * * admin_ckey - The ckey of the admin that made the rank change.
  */
-/datum/controller/subsystem/player_ranks/proc/add_player_rank_sql(datum/player_rank_controller/controller, ckey, admin_ckey)
+/datum/controller/subsystem/player_ranks/proc/add_player_rank_sql(datum/player_rank_controller/controller, ckey, admin_ckey, tier = 1)
 	PROTECTED_PROC(TRUE)
 
 	if(IsAdminAdvancedProcCall())
 		return FALSE
 
 	var/datum/db_query/query_add_player_rank = SSdbcore.NewQuery(
-		"INSERT INTO [format_table_name(PLAYER_RANK_TABLE_NAME)] (ckey, rank, admin_ckey) VALUES(:ckey, :rank, :admin_ckey) \
-		ON DUPLICATE KEY UPDATE deleted = 0, admin_ckey = :admin_ckey",
-		list("ckey" = ckey, "rank" = controller.rank_title, "admin_ckey" = admin_ckey),
+		"INSERT INTO [format_table_name(PLAYER_RANK_TABLE_NAME)] (ckey, rank, admin_ckey, tier) VALUES(:ckey, :rank, :admin_ckey, :tier) \
+		ON DUPLICATE KEY UPDATE deleted = 0, admin_ckey = :admin_ckey, tier = :tier",
+		list("ckey" = ckey, "rank" = controller.rank_title, "admin_ckey" = admin_ckey, "tier" = tier),
 	)
 
 	if(!query_add_player_rank.warn_execute())

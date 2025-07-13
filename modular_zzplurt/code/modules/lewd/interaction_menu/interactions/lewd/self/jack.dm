@@ -33,8 +33,8 @@
 	user_arousal = 6
 
 /datum/interaction/lewd/jack_self/act(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	if(!ishuman(user))
-		return
+	//if(!ishuman(user))
+	//	return
 	var/obj/item/liquid_container
 
 	var/obj/item/cached_item = user.get_active_held_item()

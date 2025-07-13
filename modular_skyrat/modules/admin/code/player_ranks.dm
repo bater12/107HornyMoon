@@ -41,23 +41,29 @@ ADMIN_VERB(manage_player_ranks, R_ADMIN, "Manage Player Ranks", "Manage who has 
 	var/list/choices = list("Add", "Remove")
 	switch(tgui_alert(usr, "What would you like to do?", "Manage [group]s", choices))
 		if("Add")
-			var/name = input(usr, "Please enter the CKEY (case-insensitive) of the person you would like to make a [group_title]:", "Add a [group_title]") as null|text
+			var/name = input(usr, "Введите CKEY игрока (нечувствительно к регистру):", "Добавить [group_title]") as null|text
 			if(!name)
 				return
 
 			var/player_to_be = ckey(name)
 			if(!player_to_be)
-				to_chat(usr, span_warning("\"[name]\" is not a valid CKEY."))
+				to_chat(usr, span_warning("\"[name]\" — некорректный CKEY."))
 				return
 
-			var/success = SSplayer_ranks.add_player_to_group(usr.client, player_to_be, group_title)
+			// Только для донатеров — запрашиваем уровень tier
+			var/tier = 1
+			if(group_title == "donator")
+				tier = input(usr, "Введите уровень доната (1–3):", "Donator Tier") as num
+				if(isnull(tier) || !(tier in list(1, 2, 3)))
+					to_chat(usr, span_warning("Некорректный уровень доната."))
+					return
 
+			var/success = SSplayer_ranks.add_player_to_group(usr.client, player_to_be, group_title, tier)
 			if(!success)
 				return
 
-			message_admins("[key_name(usr)] has granted [group_title] status to [player_to_be].")
-			log_admin_private("[key_name(usr)] has granted [group_title] status to [player_to_be].")
-
+			message_admins("[key_name(usr)] выдал статус [group_title] игроку [player_to_be] с уровнем [tier].")
+			log_admin_private("[key_name(usr)] выдал статус [group_title] игроку [player_to_be] с уровнем [tier].")
 
 		if("Remove")
 			var/name = input(usr, "Please enter the CKEY (case-insensitive) of the person you would like to no longer be a [group_title]:", "Remove a [group_title]") as null|text

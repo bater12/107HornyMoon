@@ -364,7 +364,7 @@
 	result = /obj/item/food/emperor_roll
 	category = CAT_LIZARD
 
-/datum/crafting_recipe/food/honey_sweetroll
+/datum/crafting_recipe/food/honey_roll
 	name = "Honey sweetroll"
 	reqs = list(
 		/obj/item/food/rootroll = 1,

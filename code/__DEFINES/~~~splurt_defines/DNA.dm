@@ -19,10 +19,10 @@
 
 //genitals
 #undef TESTICLES_MAX_SIZE
-#define TESTICLES_MAX_SIZE 8
+#define TESTICLES_MAX_SIZE 3
 
 #undef PENIS_MAX_LENGTH
-#define PENIS_MAX_LENGTH 128
+#define PENIS_MAX_LENGTH 30
 
 //sex
 #define ORGAN_SLOT_BUTT "butt"
@@ -35,10 +35,10 @@
 #define ORGAN_SLOT_EXTERNAL_SPIDER_LEGS "spider_legs"
 
 #define BUTT_MIN_SIZE 1
-#define BUTT_MAX_SIZE 8
+#define BUTT_MAX_SIZE 3
 
 #define BREASTS_MIN_SIZE 0
-#define BREASTS_MAX_SIZE 19
+#define BREASTS_MAX_SIZE 7
 
 #define BELLY_MIN_SIZE 1
-#define BELLY_MAX_SIZE 10
+#define BELLY_MAX_SIZE 3

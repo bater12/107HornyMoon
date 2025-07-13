@@ -69,9 +69,6 @@ GLOBAL_LIST_INIT_TYPED(quirk_blacklist, /list/datum/quirk, list(
 	// Both quirks add a cosmetic glow effect.
 	list(/datum/quirk/rad_fiend, /datum/quirk/cosglow),
 
-	// You have an irremovable suit.
-	list(/datum/quirk/nudist,/datum/quirk/equipping/entombed),
-
 	// Conflicting health add-remove effect.
 	//list(/datum/quirk/flimsy,/datum/quirk/tough),
 

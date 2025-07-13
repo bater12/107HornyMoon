@@ -54,7 +54,7 @@
 	var/emag_effect = FALSE
 
 /datum/species/synthetic/allows_food_preferences()
-	return FALSE
+	return TRUE
 
 /datum/species/synthetic/get_default_mutant_bodyparts()
 	return list(
