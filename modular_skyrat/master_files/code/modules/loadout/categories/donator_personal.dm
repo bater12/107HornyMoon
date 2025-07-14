@@ -50,8 +50,8 @@
 
 /datum/loadout_item/shoes/rax_armadyne_boots
 	name = "Tactical Boots"
-	item_path = /obj/item/clothing/shoes/combat/rax
-//	ckeywhitelist = list("raxraus")
+	item_path = /obj/item/clothing/shoes/jackboots/peacekeeper/armadyne/rax
+	//ckeywhitelist = list("raxraus")
 
 /datum/loadout_item/suit/rax_peacekeeper_jacket
 	name = "Peacekeeper jacket"

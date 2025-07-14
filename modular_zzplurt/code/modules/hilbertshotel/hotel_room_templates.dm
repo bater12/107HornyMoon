@@ -73,6 +73,12 @@
 	mappath = "_maps/splurt/templates/apartment_skyscraper.dmm"
 	category = GHC_APARTMENT
 
+/datum/map_template/ghost_cafe_rooms/apartment_mountainside
+	name = "Mountainside Apartment"
+	mappath = "_maps/splurt/templates/apartment_mountainside.dmm"
+	category = GHC_SPECIAL
+	landing_coords = list(14, 4)
+
 /datum/map_template/ghost_cafe_rooms/apartment_city
 	name = "City Apartment"
 	mappath = "_maps/splurt/templates/apartment_city.dmm"

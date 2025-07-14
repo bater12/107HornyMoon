@@ -10,11 +10,3 @@
 
 	base_antags = 1
 	maximum_antags = 3
-
-/datum/round_event/antagonist/team/revolution
-	var/required_role = ROLE_REV_HEAD
-
-	var/datum/team/revolution/rev_team
-
-/datum/round_event/antagonist/team/revolution/candidate_roles_setup(mob/candidate)
-	candidate.mind.special_role = required_role

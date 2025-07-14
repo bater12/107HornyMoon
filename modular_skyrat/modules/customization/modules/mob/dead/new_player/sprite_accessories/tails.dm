@@ -451,3 +451,11 @@
 /datum/sprite_accessory/tails/mammal/wagging/peacock
 	name = "Peacock"
 	icon_state = "peacock"
+
+/datum/sprite_accessory/tails/mammal/wagging/vulpkanin/fox/ann
+	name = "Fox (Alt 3)"
+	icon_state = "foxann"
+
+/datum/sprite_accessory/tails/mammal/wagging/kitsune/ann
+	name = "Kitsune (Ann)"
+	icon_state = "kitsuann"

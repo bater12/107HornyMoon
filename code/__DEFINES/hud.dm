@@ -17,7 +17,7 @@
 
 //used to set the default viewport to the user's preference.
 #define VIEWPORT_USE_PREF "use_pref"
-#define WIDESCREEN_VIEWPORT_SIZE "19x15"
+#define WIDESCREEN_VIEWPORT_SIZE "21x15" //SPLURT EDIT: Increased from 19x15 to 21x15
 #define SQUARE_VIEWPORT_SIZE "15x15"
 
 /*
@@ -194,11 +194,12 @@
 #define ui_ghost_spawners_menu "SOUTH:6,CENTER-3:24"
 #define ui_ghost_orbit "SOUTH:6,CENTER-2:24"
 #define ui_ghost_reenter_corpse "SOUTH:6,CENTER-1:24"
-#define ui_ghost_teleport "SOUTH:6,CENTER:24"
-#define ui_ghost_settings "SOUTH: 6, CENTER+1:24"
-#define ui_ghost_minigames "SOUTH: 6, CENTER+2:24"
-#define ui_ghost_language_menu "SOUTH: 6, CENTER+3:24"
-#define ui_ghost_floor_changer "SOUTH: 6, CENTER+3:8"
+#define ui_dnr "SOUTH:6,CENTER:24"
+#define ui_ghost_teleport "SOUTH:6,CENTER+1:24"
+#define ui_ghost_settings "SOUTH: 6, CENTER+2:24"
+#define ui_ghost_minigames "SOUTH: 6, CENTER+3:24"
+#define ui_ghost_language_menu "SOUTH: 6, CENTER+4:22"
+#define ui_ghost_floor_changer "SOUTH: 6, CENTER+4:7"
 
 //Blobbernauts
 #define ui_blobbernaut_overmind_health "EAST-1:28,CENTER+0:19"

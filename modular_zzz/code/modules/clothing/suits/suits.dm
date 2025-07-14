@@ -32,3 +32,22 @@
 	worn_icon = 'modular_zzz/icons/mob/clothing/suits.dmi'
 	worn_icon_digi = 'modular_zzz/icons/mob/clothing/suits.dmi'
 	icon_state = "rohai_armor"
+
+/obj/item/clothing/suit/toggle/kazeshini_cape
+	name = "Kazeshini Cape"
+	desc = "kazeshini cape."
+	icon_state = "reaper_cape"
+	icon = 'modular_zzz/icons/obj/clothing/suits.dmi'
+	worn_icon = 'modular_zzz/icons/mob/clothing/suits.dmi'
+	worn_icon_digi = 'modular_zzz/icons/mob/clothing/suits.dmi'
+	toggle_noun = "fire"
+	body_parts_covered = ARMS|CHEST
+
+/obj/item/clothing/suit/toggle/kazeshini_cape/Initialize(mapload)
+	. = ..()
+	allowed = GLOB.security_vest_allowed
+
+/obj/item/clothing/suit/toggle/kazeshini_cape/alt
+	name = "Alternative Kazeshini Cape"
+	desc = "Alternative kazeshini cape."
+	icon_state = "sectac_w"

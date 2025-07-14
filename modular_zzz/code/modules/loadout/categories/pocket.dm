@@ -6,7 +6,7 @@
 /datum/loadout_item/pocket_items/personal_allowed_pets
 	name = "Personal pets beacon"
 	item_path = /obj/item/choice_beacon/personal_allowed_pets
-	ckeywhitelist = list("smol42", "oni3288", "ghos7ik", "discord980", "scramblescream", "flaffug", "romontesque", "smileycom")
+	ckeywhitelist = list("smol42", "oni3288", "ghos7ik", "discord980", "scramblescream", "flaffug", "romontesque", "smileycom", "sutulayapsina")
 
 /datum/loadout_item/pocket_items/irellia
 	name = "Personal pets beacon"

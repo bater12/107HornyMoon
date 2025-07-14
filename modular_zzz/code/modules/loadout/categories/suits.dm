@@ -77,3 +77,13 @@
 	item_path = /obj/item/clothing/suit/armor/rohai_armor
 	restricted_roles = list(ALL_JOBS_SEC)
 	ckeywhitelist = list("someoldvg", "enigma418", "flippingtable", "allazarius", "trora", "siamant", "mihana964", "wangig", "omantis", "sc1de", "kladmenuwu", "manafluff", "hardbass228", "flaffug")
+
+/datum/loadout_item/suit/armor/kazeshini_cape
+	name = "Kazeshini Cape"
+	item_path = /obj/item/clothing/suit/toggle/kazeshini_cape
+	ckeywhitelist = list("mercreaper")
+
+/datum/loadout_item/suit/armor/kazeshini_cape
+	name = "Kazeshini Cape"
+	item_path = /obj/item/clothing/suit/toggle/kazeshini_cape/alt
+	ckeywhitelist = list("mercreaper")

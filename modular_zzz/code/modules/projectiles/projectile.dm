@@ -15,3 +15,6 @@
 
 /obj/projectile/magic/aoe/juggernaut
 	speed = 0.3
+
+/obj/projectile/bullet/arrow
+	speed = 2.5

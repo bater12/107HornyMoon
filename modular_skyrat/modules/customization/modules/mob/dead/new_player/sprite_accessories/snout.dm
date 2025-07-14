@@ -478,3 +478,11 @@
 	icon_state = "masked" // By @Sweettoothart
 	color_src = USE_ONE_COLOR
 	organ_type = /obj/item/organ/snout/top_adj
+
+/datum/sprite_accessory/snouts/mammal/vulp
+	name = "Vulp"
+	icon_state = "vulp"
+
+/datum/sprite_accessory/snouts/mammal/vulp2
+	name = "Vulp Two-shade"
+	icon_state = "vulp2"

@@ -408,3 +408,7 @@
 /datum/sprite_accessory/ears/acrador/short
 	icon_state = "acrador_short"
 	name = "Acrador (Short)"
+
+/datum/sprite_accessory/ears/mutant/vulp
+	name = "Vulp"
+	icon_state = "vulp"

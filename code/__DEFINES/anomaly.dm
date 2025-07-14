@@ -15,7 +15,7 @@
 ///Time in seconds before anomaly is announced
 #define ANOMALY_ANNOUNCE_MEDIUM_TIME (2 EVENT_SECONDS)
 ///Let them know how far away the anomaly is
-#define ANOMALY_ANNOUNCE_MEDIUM_TEXT "сканеры дальнего радиуса действия. Вероятное местоположение:"
+#define ANOMALY_ANNOUNCE_MEDIUM_TEXT "обнаружена на сканерах дальнего радиуса действия. Вероятное местоположение:"
 
 /**
  * Chaotic but not harmful anomalies. Give the station a chance to find it on their own.

@@ -42,7 +42,7 @@
 /datum/objective/assassinate/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Убейте [target.name], в должности [!target_role_type ? target.assigned_role.title : target.special_role] ОДИН РАЗ." //NOVA EDIT CHANGE
+		explanation_text = "Убейте [target.name], в должности [!target_role_type ? target.assigned_role.title : english_list(target.get_special_roles())] ОДИН РАЗ." //NOVA EDIT CHANGE
 	else
 		explanation_text = "Свободное задание."
 
@@ -50,14 +50,14 @@
 /datum/objective/mutiny/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Уничтожьте или изгоните [target.name], в должности [!target_role_type ? target.assigned_role.title : target.special_role]."
+		explanation_text = "Уничтожьте или изгоните [target.name], в должности [!target_role_type ? target.assigned_role.title : english_list(target.get_special_roles())]."
 	else
 		explanation_text = "Свободное задание."
 
 // Maroon
 /datum/objective/maroon/update_explanation_text()
 	if(target?.current)
-		explanation_text = "Не дайте [target.name], в должности [!target_role_type ? target.assigned_role.title : target.special_role] уйти со станции живым."
+		explanation_text = "Не дайте [target.name], в должности [!target_role_type ? target.assigned_role.title : english_list(target.get_special_roles())] уйти со станции живым."
 	else
 		explanation_text = "Свободное задание."
 
@@ -65,7 +65,7 @@
 /datum/objective/debrain/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Украдите мозг [target.name], в должности [!target_role_type ? target.assigned_role.title : target.special_role]."
+		explanation_text = "Украдите мозг [target.name], в должности [!target_role_type ? target.assigned_role.title : english_list(target.get_special_roles())]."
 	else
 		explanation_text = "Свободное задание."
 
@@ -73,7 +73,7 @@
 /datum/objective/protect/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Защищайте [target.name], в должности [!target_role_type ? target.assigned_role.title : target.special_role]."
+		explanation_text = "Защищайте [target.name], в должности [!target_role_type ? target.assigned_role.title : english_list(target.get_special_roles())]."
 	else
 		explanation_text = "Свободное задание."
 
@@ -81,7 +81,7 @@
 /datum/objective/jailbreak/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Убедитесь что [target.name], в должности [!target_role_type ? target.assigned_role.title : target.special_role] покинет станцию живым и свободным."
+		explanation_text = "Убедитесь что [target.name], в должности [!target_role_type ? target.assigned_role.title : english_list(target.get_special_roles())] покинет станцию живым и свободным."
 	else
 		explanation_text = "Свободное задание."
 
@@ -89,7 +89,7 @@
 /datum/objective/jailbreak/detain/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Убедитесь что [target.name], в должности [!target_role_type ? target.assigned_role.title : target.special_role] будет доставлен на аванпост ЦА живым и под стражей."
+		explanation_text = "Убедитесь что [target.name], в должности [!target_role_type ? target.assigned_role.title : english_list(target.get_special_roles())] будет доставлен на аванпост ЦА живым и под стражей."
 	else
 		explanation_text = "Свободное задание."
 
@@ -329,7 +329,7 @@
 /datum/objective/assassinate/obsessed/update_explanation_text()
 	..()
 	if(target?.current)
-		explanation_text = "Убей [target.name], в должности [!target_role_type ? target.assigned_role.title : target.special_role]."
+		explanation_text = "Убей [target.name], в должности [!target_role_type ? target.assigned_role.title : english_list(target.get_special_roles())]."
 	else
 		message_admins("WARNING! [ADMIN_LOOKUPFLW(owner)] obsessed objectives forged without an obsession!")
 		explanation_text = "Свободное задание"
