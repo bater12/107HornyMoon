@@ -44,3 +44,8 @@
 	name = "Mouse (Alt)"
 	icon = 'modular_zzz/icons/mob/sprite_accessory/ears.dmi'
 	icon_state = "mouse"
+
+/datum/sprite_accessory/ears/mutant/vulp
+	name = "Vulp"
+	icon_state = "vulp"
+	icon = 'modular_zzz/icons/mob/sprite_accessory/ears.dmi'

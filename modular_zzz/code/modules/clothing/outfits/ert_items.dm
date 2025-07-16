@@ -1,18 +1,27 @@
 /obj/item/storage/box/centcom
-	name = "box"
+	name = "Centcom Box"
 	desc = "It's just an ordinary box."
 	icon_state = "internals_large"
 
 /obj/item/storage/box/centcom/PopulateContents()
 	var/static/items_inside = list(
-		/obj/item/clothing/mask/gas/sechailer = 1,
+		/obj/item/pinpointer/crew/centcom = 1,
+		/obj/item/pinpointer/nuke = 1,
 		/obj/item/tank/internals/emergency_oxygen/double = 1,
 		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
 		/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
-		/obj/item/pinpointer/nuke = 1,
 		/obj/item/crowbar/power/syndicate = 1,
 		)
 	generate_items_inside(items_inside,src)
+
+/obj/item/pinpointer/crew/centcom
+	name = "Centcom Pinpointer"
+	desc = "A handheld tracking device that locks onto certain signals. Ignores suit sensors, but is much less accurate."
+	icon = 'modular_zzz/icons/obj/device.dmi'
+	icon_state = "pinpointer_centcom"
+	worn_icon_state = "pinpointer_black"
+	minimum_range = 5
+	ignore_suit_sensor_level = TRUE
 
 /obj/item/storage/box/m223_ammo
 	name = "box with ammo"

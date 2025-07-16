@@ -75,6 +75,9 @@
 	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, PROC_REF(on_moved))
 	RegisterSignal(parent, COMSIG_QDELETING, PROC_REF(parent_delete))
 
+	RegisterSignal(parent, COMSIG_ITEM_STORED, PROC_REF(on_stored))
+	RegisterSignal(parent, COMSIG_ITEM_UNSTORED, PROC_REF(on_unstored))
+
 /datum/jukebox/Destroy()
 	unlisten_all()
 	parent = null
@@ -341,6 +344,9 @@
 /datum/jukebox/proc/update_listener(mob/listener)
 	PROTECTED_PROC(TRUE)
 
+	if(isnull(active_song_sound))
+		return
+
 	active_song_sound?.status = listeners[listener] || NONE
 
 	var/turf/sound_turf = get_turf(parent)
@@ -407,6 +413,23 @@
 
 /datum/jukebox/single_mob/start_music(mob/solo_listener)
 	register_listener(solo_listener)
+
+/datum/jukebox/proc/check_storage_state()
+	if(istype(parent, /obj/item) && (parent:item_flags & IN_STORAGE))
+		unlisten_all()
+		active = FALSE
+	else
+		if(selection && !active)
+			start_music()
+			active = TRUE
+
+/datum/jukebox/proc/on_stored(datum/source, datum/storage/storage)
+	SIGNAL_HANDLER
+	check_storage_state()
+
+/datum/jukebox/proc/on_unstored(datum/source, datum/storage/storage)
+	SIGNAL_HANDLER
+	check_storage_state()
 
 #undef IS_PREF_MUTED
 

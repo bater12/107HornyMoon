@@ -51,3 +51,33 @@
 	name = "Alternative Kazeshini Cape"
 	desc = "Alternative kazeshini cape."
 	icon_state = "sectac_w"
+
+/obj/item/clothing/neck/cloak/rev_mori
+	name = "Revento Mori jacket"
+	desc = "Revento Mori jacket, customised and tailored. The jacket is made of water-repellent materials, for extra protection of the outfit from water. The collar is embroidered with the company logo and embroidered initials E.W. There is also an embroidered cat's paw on the back"
+	icon = 'modular_zzz/icons/obj/clothing/suits.dmi'
+	worn_icon = 'modular_zzz/icons/mob/clothing/suits.dmi'
+	worn_icon_digi = 'modular_zzz/icons/mob/clothing/suits.dmi'
+	slot_flags = ITEM_SLOT_OCLOTHING|ITEM_SLOT_NECK
+	icon_state = "rev_mori"
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Revento Mori suit" = list(
+			RESKIN_ICON_STATE = "rev_mori",
+			RESKIN_WORN_ICON_STATE = "rev_mori_s"
+		),
+		"Revento Mori neck" = list(
+			RESKIN_ICON_STATE = "rev_mori",
+			RESKIN_WORN_ICON_STATE = "rev_mori_n"
+		)
+	)
+
+/obj/item/clothing/suit/montur
+	name = "Dark Montur"
+	desc = "Reserved yet commanding, this uniform of MI13 is tailored from a heavy, matte fabric of deep coal-blue, absorbing ambient light. The form-fitting cut enhances the wearer’s silhouette without restricting movement."
+	icon = 'modular_zzz/icons/obj/clothing/suits.dmi'
+	worn_icon = 'modular_zzz/icons/mob/clothing/suits.dmi'
+	worn_icon_digi = 'modular_zzz/icons/mob/clothing/suits.dmi'
+	lefthand_file = 'modular_zzz/icons/mob/clothing/lefthand.dmi'
+	righthand_file = 'modular_zzz/icons/mob/clothing/righthand.dmi'
+	icon_state = "montur"

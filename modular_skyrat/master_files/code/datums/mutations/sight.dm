@@ -1,2 +1,2 @@
-/datum/mutation/thermal
-	locked = TRUE
+// /datum/mutation/thermal
+// 	locked = TRUE

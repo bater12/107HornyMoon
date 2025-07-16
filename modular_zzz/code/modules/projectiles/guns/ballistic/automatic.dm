@@ -9,6 +9,13 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/ak12
 	fire_sound = 'modular_zzz/sounds/ak12_fire.ogg'
 
+/obj/item/gun/ballistic/automatic/ar/ak12/update_icon_state()
+	. = ..()
+	if(magazine)
+		icon_state = "ak12"
+	else
+		icon_state = "ak12_e"
+
 /obj/item/gun/ballistic/automatic/ar/ak12/pink
 	name = "\improper Pink AK-12 rifle"
 	icon_state = "akr12"

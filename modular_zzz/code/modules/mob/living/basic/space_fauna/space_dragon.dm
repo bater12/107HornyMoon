@@ -8,7 +8,7 @@
 /datum/action/cooldown/mob_cooldown/wing_buffet
 	gust_distance = 8
 
-/mob/living/basic/carp
+/mob/living/basic/carp/advanced
 	health = 50
 	maxHealth = 50
 	obj_damage = 100

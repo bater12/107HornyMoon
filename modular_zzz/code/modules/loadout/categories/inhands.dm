@@ -12,3 +12,8 @@
 	name = "Kazeshini Katana Kit"
 	item_path = /obj/item/kazeshini_modkit
 	ckeywhitelist = list("mercreaper")
+
+/datum/loadout_item/inhand/backpack/satchel/hahun_bag
+	name = "unloading bag"
+	item_path = /obj/item/storage/backpack/satchel/hahun_bag
+	ckeywhitelist = list("enigma418")

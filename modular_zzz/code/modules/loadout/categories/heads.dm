@@ -88,3 +88,8 @@
 	item_path = /obj/item/clothing/head/helmet/sec/aegis
 	restricted_roles = list(ALL_JOBS_SEC)
 	ckeywhitelist = list("hellsinggc")
+
+/datum/loadout_item/head/sp_beret
+	name = "Space beret"
+	item_path = /obj/item/clothing/head/sp_beret
+	ckeywhitelist = list("enigma418")

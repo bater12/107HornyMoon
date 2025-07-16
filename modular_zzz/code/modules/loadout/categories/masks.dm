@@ -51,3 +51,8 @@
 /datum/loadout_item/mask/balaclava/breath
 	name = "Breathaclava"
 	item_path = /obj/item/clothing/mask/balaclava/breath
+
+/datum/loadout_item/mask/eo95_mask
+	name = "EO-95 mask"
+	item_path = /obj/item/clothing/mask/gas/syndicate/eo95_mask
+	ckeywhitelist = list("enigma418")

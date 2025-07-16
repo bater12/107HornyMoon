@@ -92,3 +92,8 @@
 /obj/item/clothing/mask/balaclava/breath
 	name = "Breathaclava"
 	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS | GAS_FILTERING
+
+/obj/item/clothing/mask/gas/syndicate/eo95_mask
+	name = "EO-95 mask"
+	desc = "A mask with ariral design, emits  a strange purple particles around it, allow the user to breath more cleaner air, that would be safer for it's owner because of anatomy of arirals."
+	icon_state = "eo95_mask"

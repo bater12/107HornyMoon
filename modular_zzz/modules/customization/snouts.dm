@@ -58,3 +58,13 @@
 	relevent_layers = list(BODY_FRONT_LAYER, BODY_ADJ_LAYER)
 	color_src = USE_MATRIXED_COLORS
 	has_inner = TRUE
+
+/datum/sprite_accessory/snouts/mammal/vulp
+	name = "Vulp"
+	icon = 'modular_zzz/icons/mob/sprite_accessory/snouts.dmi'
+	icon_state = "vulp"
+
+/datum/sprite_accessory/snouts/mammal/vulp2
+	name = "Vulp Two-shade"
+	icon = 'modular_zzz/icons/mob/sprite_accessory/snouts.dmi'
+	icon_state = "vulp2"

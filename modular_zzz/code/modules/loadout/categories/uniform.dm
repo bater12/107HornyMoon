@@ -55,3 +55,8 @@
 	item_path = /obj/item/clothing/under/rank/security/officer/ecu_2
 	restricted_roles = list(ALL_JOBS_SEC)
 	ckeywhitelist = list("hellsinggc")
+
+/datum/loadout_item/uniform/MI13_uniform
+	name = "MI13 combat uniform"
+	item_path = /obj/item/clothing/under/MI13_uniform
+	ckeywhitelist = list("enigma418")

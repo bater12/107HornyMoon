@@ -81,3 +81,8 @@
 /datum/armament_entry/company_import/micron/mcr_upgrades/bluespace_part_kit
 	cost = PAYCHECK_CREW * 11
 
+/datum/armament_entry/company_import/micron/weapon
+	name = "Advanced MCR-01"
+	subcategory = "Weapon"
+	item_type = /obj/item/gun/microfusion/mcr01/advanced
+	cost = PAYCHECK_COMMAND * 12
