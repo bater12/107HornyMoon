@@ -61,7 +61,7 @@ GLOBAL_VAR(first_officer)
 	response_not_enough = "Your bank balance does not hold enough money at the moment or the system has been overriden. We are sending a patrol ship for second attempt negotiations, stand by."
 	announcement_color = "purple"
 
-/datum/pirate_gang/nri_raiders/generate_message(payoff)
+/* /datum/pirate_gang/nri_raiders/generate_message(payoff)
 	var/number = rand(1,99)
 	///Station name one is the most important pick and is pretty much the station's main argument against getting fined, thus it better be mostly always right.
 	var/station_designation = pick_weight(list(
@@ -96,7 +96,7 @@ GLOBAL_VAR(first_officer)
 	arrival_announcement = replacetext(arrival_announcement, "%NUMBER1", pick(GLOB.phonetic_alphabet))
 	arrival_announcement = replacetext(arrival_announcement, "%NUMBER2", pick(GLOB.phonetic_alphabet))
 	arrival_announcement = replacetext(arrival_announcement, "%NUMBER3", pick(GLOB.phonetic_alphabet))
-	return new /datum/comm_message(threat_title, built_threat_content, possible_answers)
+	return new /datum/comm_message(threat_title, built_threat_content, possible_answers) */
 
 /datum/outfit/pirate/nri/post_equip(mob/living/carbon/human/equipped)
 	. = ..()

@@ -13,3 +13,6 @@
   - rscadd: High frequency blade now has hitsound modularity.
   - bugfix: High frequency blade provides block feedback properly.
   - bugfix: High frequency blade uses modern swing animation properly.
+2025-07-16:
+  SapphoQueer:
+  - bugfix: Proteans no longer get thirsty.
