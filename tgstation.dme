@@ -10409,6 +10409,7 @@
 #include "modular_zzz\code\modules\antagonists\heretic\knowledge\starting_lore.dm"
 #include "modular_zzz\code\modules\antagonists\heretic\knowledge\void_lore.dm"
 #include "modular_zzz\code\modules\antagonists\nukeop\outfits.dm"
+#include "modular_zzz\code\modules\antagonists\pirate\pirate_gangs.dm"
 #include "modular_zzz\code\modules\antagonists\revolution\revolution.dm"
 #include "modular_zzz\code\modules\bitrunning\domains\hard\bubblegum.dm"
 #include "modular_zzz\code\modules\bitrunning\domains\hard\colossus.dm"
